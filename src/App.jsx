@@ -15,12 +15,20 @@ function App() {
   const handleSubmit = async (term) => {
     const results = await searchImage(term);
 
-    setImage(results);
+    setImages(results);
   };
   return (
-    <div className="App">
-      <SearchBar onSubmit={handleSubmit} />
-      <ImageList images={images} />
+    <div className="App container-fluid">
+      <div className="row">
+        <div className="col">
+          <SearchBar onSubmit={handleSubmit} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <ImageList images={images} />
+        </div>
+      </div>
     </div>
   );
 }

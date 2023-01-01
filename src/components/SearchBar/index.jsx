@@ -17,9 +17,10 @@ function SearchBar({ onSubmit }) {
     setTerm(event.target.value);
   };
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={handleSubmit}>
-        <input value={term} onChange={handleChange} />
+        <label for="floatingInput">Search</label>
+        <input value={term} onChange={handleChange} id="floatingInput" />
       </form>
     </div>
   );
